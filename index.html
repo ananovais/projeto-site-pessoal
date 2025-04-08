@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Pessoal</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik+Mono+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="#homeSection"><img src="assets/icons/coffee.png" id="coffee"></a>
+        <ul id="navbarLinks">
+            <li><a href="#aboutSection">Sobre mim</a></li>
+            <li><a href="#skillsSection">Skills</a></li>
+            <li><a href="https://github.com/ananovais" target="_blank">GitHub</a></li>
+            <li><b><a href="#contactSection">Contato</a></b></li>
+        </ul>
+    </nav>
+    <section id="homeSection">
+        <div id="homePhoto"></div>
+        <div id="homeText">
+            <div>
+                <h1 class="title">Ana Novais</h1>
+                <h2>Programadora Front-End</h2>
+                <div class="defaultButton downloadButtonLight">
+                    <img src="assets/icons/download.png">
+                    <a href="sources/AnaNovais_CV-en.pdf" download="AnaNovais_CV-en.pdf">Baixar currículo</a>
+                </div>  
+            </div>
+        </div>
+    </section>
+    <section id="aboutSection">
+        <div id="aboutTextContainer">
+            <div id="aboutTextItem">
+                <h1 class="title">Sobre mim</h1>
+                <p class="customLineHeight">Sou uma profissional com experiência em tecnologia, tendo desempenhado funções como Product Owner, Desenvolvedora Web e Analista de Suporte. Possuo competências em gestão de produtos, desenvolvimento técnico e suporte ao usuário, sempre focada na entrega de soluções eficientes e de alta qualidade.</p>
+                <div class="defaultButton linkedInButton">
+                    <img src="assets/icons/arrow.png">
+                    <a href="https://www.linkedin.com/in/ana-novais" target="_blank">Confira meu LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div id="aboutPhoto"></div>
+    </section>
+    <section id="skillsSection">
+        <div class="overlay">
+            <h1 class="title">Skills</h1>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>ES6</li>
+                <li>React</li>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>JIRA</li>
+            </ul>
+            <div class="defaultButton downloadButtonDark">
+                <img src="assets/icons/download.png">
+                <a href="sources/AnaNovais_CV-en.pdf" download="AnaNovais_CV-en.pdf">Baixar currículo completo</a>
+            </div> 
+        </div>
+    </section>
+    <!-- <section id="projectSection">
+        <div class="carousel-wrapper">
+            <h1 class="title">Projetos</h1>
+            <button class="carousel-btn btn-left" onclick="scrollProjects(-1)">←</button>
+            <div id="projectContainer">
+                <div class="projectItem">
+                    <h2>Site de Links</h2>
+                    <p>Nesse projeto eu desenvolvi um site de links da Bio para colocar nas minhas redes sociais. Utilizei as tecnologias HTML e CSS.</p>
+                    <div class="defaultButton projectButton">
+                        <img src="assets/icons/github.png">
+                        <a href="https://github.com/ananovais/projeto-site-links" target="_blank">Ver no GitHub</a>
+                    </div>
+                </div>
+                <div class="projectItem">
+                    <h2>Site de Links</h2>
+                    <p>Nesse projeto eu desenvolvi um site de links da Bio para colocar nas minhas redes sociais. Utilizei as tecnologias HTML e CSS.</p>
+                    <div class="defaultButton projectButton">
+                        <img src="assets/icons/github.png">
+                        <a href="https://github.com/ananovais/projeto-site-links" target="_blank">Ver no GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn btn-right" onclick="scrollProjects(1)">→</button>
+        </div>
+    </section> -->
+    <section id="contactSection">
+        <div id="contactTextContainer">
+            <div id="contactTextItem">
+                <h1 class="title">Contato</h1>
+                <p class="customLineHeight">Gostaria de bater um papo comigo? <br>Vou deixar todas as minhas formas de contato e redes sociais listadas abaixo.</p>
+                <address class="emailAndPhone">
+                    <div class="contactItem">
+                        <img src="assets/icons/email.png">
+                        <p>anapaulanovais@outlook.com</p>
+                    </div>
+                    <div class="contactItem">
+                        <img src="assets/icons/whatsapp.png">
+                        <p>+55 (31) 99344-2678</p>
+                    </div>
+                </address>
+                <div class="socialMedia">
+                    <a href="https://www.linkedin.com/in/ana-novais" target="_blank"><img src="assets/icons/linkedin.png"></a>
+                    <a href="https://github.com/ananovais" target="_blank"><img src="assets/icons/github.png"></a>
+                </div>
+            </div>
+        </div>
+        <div id="contactPhoto"></div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
