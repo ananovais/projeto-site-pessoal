@@ -1,32 +1,44 @@
+:root{
+    --primary-color: #3C3C3C;
+    --secondary-color: #FFFFFF;
+    --tertiary-color: #EDEDED;
+    --title-gray: #B6B6B6;
+    --darker-background: #222222;
+    --highlight-color: #FF9E44;
+    --highlight-soft: #E970FF;
+    --rounded-button: 8px;
+    --rounded-full-section: 24px;
+}
+
 *{
     font-family: "Rubik", sans-serif;
 }
 
 section{
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .defaultButton{
     display: flex;
     align-items: center;
-    color: #FFFFFF;
+    color: var(--secondary-color);
     width: fit-content;
     padding: 8px 14px;
-    border-radius: 8px;
+    border-radius: var(--rounded-button);
     cursor: pointer;
     a{
         padding-left: 5px;
-        color: #FFFFFF;
+        color: var(--secondary-color);
         text-decoration: none;
     }
 }
 
 .downloadButtonLight{
-    background-color: #FF9E44;
+    background-color: var(--highlight-color);
 }
 
 .downloadButtonDark{
-    background-color: #3C3C3C;
+    background-color: var(--primary-color);
 }
 
 .linkedInButton{
@@ -35,14 +47,14 @@ section{
 }
 
 .projectButton{
-    background-color: #FF9E44;
-    border-radius: 24px;
+    background-color: var(--highlight-color);
+    border-radius: var(--rounded-full-section);
     padding: 10px;
     margin-top: 50px;
 }
 
 .title{
-    color: #FFFFFF;
+    color: var(--secondary-color);
     font-size: 3.8rem;
     font-family: "Rubik Mono One", monospace;
     font-weight: 300;
@@ -60,15 +72,18 @@ nav{
     padding: 14px 63px;
     box-shadow: 0px 4px 4px 0px #00000025;
     position: fixed;
-    background-color: #EDEDED;
+    background-color: var(--tertiary-color);
     
+    li:last-child{
+        font-weight: bold;
+    }
 }
 
 #navbarLinks{
     display: flex;
     a{
         text-decoration: none;
-        color: #3C3C3C;
+        color: var(--primary-color);
     }
     li{
         padding-left: 73px;
@@ -76,19 +91,19 @@ nav{
 }
 
 #homeSection{
-    background-color: #222222;
+    background-color: var(--darker-background);
     padding-top: 50px;
     display: flex;
     justify-content: space-between;
     
     #homePhoto{
         width: 40vw;
-        height: 100vh -60px;
+        height: calc(100vh -60px);
         background-image: url("assets/img/fotoAna.png");
         background-size: cover;
         background-position: center;
     }
-    #homeText{
+    #homeContent{
         width: 60vw;
         display: flex;
         flex-direction: column;
@@ -96,7 +111,7 @@ nav{
         align-items: center;
         
         h2{
-            color: #B6B6B6;
+            color: var(--title-gray);
             font-weight: 300;
             font-size: 2.2rem;
             padding: 20px 0px 50px 0px;
@@ -105,7 +120,7 @@ nav{
 }
 
 #aboutSection{
-    background-color: #FF9E44;
+    background-color: var(--highlight-color);
     display: flex;
     justify-content: space-between;
     
@@ -123,10 +138,13 @@ nav{
         align-items: center;
         
         #aboutTextItem{
+            display: flex;
+            flex-direction: column;
             width: 80%;
+            text-align: justify;
             p{
                 font-size: 1.3rem;
-                color: #EDEDED;
+                color: var(--tertiary-color);
                 padding: 45px 0px 65px 0px;
             }
         }
@@ -148,7 +166,7 @@ nav{
         align-items: center;
 
         h1{
-            color: #3C3C3C;
+            color: var(--primary-color);
             padding-bottom: 68px;
         }
         ul{
@@ -161,9 +179,9 @@ nav{
         }
         li{
             background-color: #00000039;
-            color: #FFFFFF;
+            color: var(--secondary-color);
             padding: 12px 18px;
-            border-radius: 8px;
+            border-radius: var(--rounded-button);
             font-size: 1.5rem;
 
         }
@@ -174,7 +192,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #222222;
+    background-color: var(--darker-background);
     width: 100vw;
 
     h1{
@@ -194,17 +212,17 @@ nav{
             flex: 0 0 auto;
             width: 350px;
             padding: 50px 45px;
-            border-radius: 24px;
-            border: 6px solid #3C3C3C;
+            border-radius: var(--rounded-full-section);
+            border: 6px solid var(--primary-color);
             
             h2{
                 font-size: 2rem;
                 font-weight: 300;
-                color: #B6B6B6;
+                color: var(--title-gray);
             }
             p{
                 padding-top: 27px;
-                color: #FFFFFF;
+                color: var(--secondary-color);
                 font-size: 1rem;
                 line-height: 1.4rem;
                 font-weight: 300;
@@ -218,7 +236,7 @@ nav{
 }
 
 #contactSection{
-    background-color: #E970FF;
+    background-color: var(--highlight-soft);
     display: flex;
     
     #contactTextContainer{
@@ -231,6 +249,8 @@ nav{
         #contactTextItem{
             width: 80%;
             max-width: 700px;
+            display: flex;
+            flex-direction: column;
         }
 
         h1{
@@ -239,7 +259,7 @@ nav{
         }
         p{
             font-size: 1.3rem;
-            color: #FFFFFF;
+            color: var(--secondary-color);
         }
     }
 
@@ -274,10 +294,101 @@ nav{
     a{
         background-color: #ffffff2c;
         padding: 12px;
-        border-radius: 8px;
+        border-radius: var(--rounded-button);
         cursor: pointer;
     }
     img{
-        height: 24px;
+        max-height: 24px;
+    }
+}
+
+@media (orientation: portrait){
+    .title{
+        font-size: 2.6rem;
+    }
+
+    #homeSection{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h2{
+            font-size: 1.7rem;
+        }
+        #homePhoto{
+            height: 30vh;
+            width: 30vh;
+            border-radius: 50%;
+            margin-bottom: 3.8rem;
+        }
+        .homeText{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    #aboutSection{
+
+        #aboutTextContainer{
+            text-align: justify;
+            width: 100vw;
+            align-items: center;
+
+            #aboutTextItem{
+                align-items: center;
+            }
+        }
+        #aboutPhoto{
+            display: none;
+        }
+    }
+
+    #contactSection{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        padding-top: 3rem;
+
+        h1{
+            text-align: center;
+        }
+        #contactPhoto{
+            height: 30vh;
+            width: 30vh;
+            border-radius: 50%;
+            margin-bottom: 3.8rem;
+        }
+        p{
+            text-align: justify;
+        }
+
+        #contactTextContainer{
+            width: 100vw;
+
+        }
+
+        .contactItem:last-child{
+            text-align: start;
+            img{
+                width: 1.75rem;
+                height: 1.75rem;
+            }
+        }
+
+        .emailAndPhone{
+            padding-bottom: 3rem;
+        }
+        .socialMedia{
+            justify-content: center;
+            margin-bottom: 3.5rem;
+        }
+    }
+}
+
+@media (max-width: 700px){
+    nav{
+        display: none;
     }
 }
